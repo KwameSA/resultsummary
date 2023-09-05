@@ -1,0 +1,279 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+strong, b {
+  font-weight: bold;
+}
+em, i {
+  font-style: italic;
+}
+a img {
+  border: none;
+}
+/* END RESET*/
+
+/* CSS VARIABLES START*/
+@font-face {
+  font-family: 'HankenGrotesk';
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format('truetype');
+}
+
+:root {
+  /* ## Gradients */
+  --clr-Light-slate-blue: hsl(252, 100%, 67%);
+  --clr-Light-royal-blue: hsl(241, 81%, 54%);
+  
+  /* ##Circle */
+  --clr-Violet-blue: hsla(256, 72%, 46%, 1);
+  --clr-Persian-blue : hsla(241, 72%, 46%, 0);
+  
+   /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* ### PRIMARY */
+  --clr-light-red: hsl(0, 100%, 67% );
+  --clr-orangey-yellow: hsl(39, 100%, 56% );
+  --clr-green-teal: hsl(166, 100%, 37% );
+  --clr-cobalt-blue: hsl(234, 85%, 45%);
+
+    /* ### FONTS */
+  --font-family-default: "HankenGrotesk", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 5rem;
+}
+
+/* CSS VARIABLES END*/
+
+/* GLOBAL STYLES START */
+html {
+    font-family: var(--font-family-default);
+    
+}
+body{
+    background-color: var(--Pale-blue);
+    line-height: 1.5rem;
+}
+
+/* GLOBAL STYLES END */
+
+/* CONTAINER STYLES START*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+.container > * {
+  flex: 1;
+}
+
+/* CONTAINER STYLES END*/
+
+
+
+/* SCORE CONTENT START */
+.score-content {
+    background: linear-gradient( to bottom,  var(--clr-Light-slate-blue), var(--clr-Light-royal-blue));
+    color: aliceblue;
+    text-align: center;
+    border-radius:0 0 20px 20px;
+    padding: 50px;
+    box-shadow: none;
+}
+.score-content > *{
+  margin-bottom: 23px;
+}
+.score-content > .score-number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.score-number p {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+  height: 10rem;
+  width: 10rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  background: linear-gradient(to bottom, var(--clr-Violet-blue), var(--clr-Persian-blue));
+  color: var(--Light-lavender);
+}
+.circle span{
+  font-size: 3em;
+  padding: 0.4em;
+  font-weight: 900;
+  color: var(--White);
+}
+.score-number p{
+ margin: 0.5em;
+}
+.big-score {
+    font-size: 3em;
+}
+.great {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-700);
+  margin-bottom: 10px;
+}
+.result-title {
+  color: var(--Light-lavender);
+  font-size: var(--fs-500);
+  font-weight: 500;
+}
+.congrats {
+  color: var(--Light-lavender);
+}
+/* SCORE CONTENT END */
+
+/* SUMMARY CONTENT START */
+.summary-content {
+    background-color: var(--White);
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    padding-left: 0 10px;
+    box-shadow: none;
+}
+.summary-content > * {
+  flex: 1;
+  margin-bottom: 20px;
+}
+.summary-items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between 10px;
+  align-items: center;
+}
+.summary-items > * {
+  flex: 1;
+}
+.summary-title {
+  font-size: var(--fs-500);
+  font-weight: 500;
+  text-align: left;
+}
+.summary-score {
+  color: var(--Dark-gray-blue);
+}
+.summary-score span{
+  font-weight: 700;
+  color: black;
+}
+.summary-items:nth-child(2) {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+.summary-items:nth-child(3) {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+.summary-items:nth-child(4) {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+.summary-items:nth-child(5) {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+
+
+.continue {
+  background-color: var(--Dark-gray-blue);
+  border-radius: 20px;
+  margin-top: 10px;
+  color: white;
+}
+.continue:hover, .continue:focus-visible {
+  color: rgb(199, 180, 12);
+}
+/* SUMMARY CONTENT END */
+
+/* ATTRIBUTIONS START */
+.attribution {
+    font-size: 11px; text-align: center;
+    padding-top: 2em;
+}
+.attribution a {
+   color: hsl(228, 45%, 44%);
+   text-decoration: none;
+}
+.attribution a:hover {
+  color: brown;
+}
+/* ATTRIBUTIONS END */
+
+/* MEDIA QUERY */
+@media (min-width: 750px) {
+    html{
+      padding: 5em;
+    }
+    .container {
+        flex-direction: row;
+        padding: 5vh 24vw;
+    } 
+    .score-content{
+      border-radius: 20px;
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3), 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+    .summary-content {
+      border-radius: 20px;
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3), 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+    .score-content > .score-number {
+      flex-direction: row;
+    }
+    
+}
