@@ -214,6 +214,7 @@ body{
 .summary-score span{
   font-weight: 700;
   color: black;
+  margin-right: 4px;
 }
 .summary-items:nth-child(2) {
   background-color: hsla(0, 100%, 67%, 0.1);
